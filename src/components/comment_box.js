@@ -22,10 +22,13 @@ constructor(props){
   render() {
     return(
       <form onSubmit={this.handleSubmit.bind(this)} className="comment-box">
+        <h4>Add a comment</h4>
         <textarea onChange={this.handleChange.bind(this)} value={this.state.comment}/>
-        <button action="submit">
-          Submit Comment
-        </button>
+        <div>
+          <button action="submit">
+            Submit Comment
+          </button>
+        </div>
       </form>
     );
   }
