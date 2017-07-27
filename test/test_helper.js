@@ -38,10 +38,11 @@
 
 
 
-
+import jsdom from 'jsdom';
 
 // Setup a testing environment to run like a browser in the command line
-
+  global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
+  global.window = global.document.defaultView;
 
 //We need to build 'renderComponent' helper that should render a givem react ComponentClass
 
