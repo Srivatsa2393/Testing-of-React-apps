@@ -67,7 +67,13 @@ import reducers from '../src/reducers';
 
 
 // Build helper for simulating events
+  $.fn.simulate = function(eventName, value) {
 
+    TestUtils.Simulate[eventName](this[0]);
+  }
+
+  //To call simulate
+  //$('div').simulate()
 
 //Set up chai-jquery
   export { renderComponent, expect };
